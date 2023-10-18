@@ -1,23 +1,25 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useTokenStore = defineStore('token', {
+export const useTokenStore = defineStore("token", {
     state: () => ({
         token: "",
     }),
     actions: {
         setToken(token: string) {
-            this.token = token
+            this.token = token;
         },
         removeToken() {
-            this.token = ""
+            this.token = "";
         },
         loadToken() {
-            const token = localStorage.getItem("token")
+            const token = localStorage.getItem("token");
             if (token !== null && token.length > 0 ) {
-                this.setToken(token)
+                this.setToken(token);
+            }else{
+                this.setToken("");
             }
         }
 
     },
-  })
+  });
   

@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import WelcomeUser from '@/components/WelcomeUser.vue';
+
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="welcome-user">
+    <WelcomeUser />
   </main>
 </template>
+
+<style scoped>
+  .welcome-user{
+    display: flex;
+    flex-direction: column;
+  }
+</style>
